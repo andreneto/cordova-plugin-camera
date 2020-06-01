@@ -157,6 +157,10 @@ cameraExport.getPicture = function (successCallback, errorCallback, options) {
     // return new CameraPopoverHandle();
 };
 
+cameraExport.checkPermission = function (successCallback, errorCallback, options) {
+    exec(successCallback, errorCallback, 'Camera', 'checkPermission', []);
+}
+
 /**
  * Removes intermediate image files that are kept in temporary storage
  * after calling [`camera.getPicture`]{@link module:camera.getPicture}. Applies only when the value of
